@@ -53,13 +53,19 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
         
         <!-- JavaScript Libraries -->
+        <script src="{{env('APP_URL')}}/resources/lib/chart/chart.min.js"></script>
+        <script src="{{env('APP_URL')}}/resources/lib/easing/easing.min.js"></script>
+        <script src="{{env('APP_URL')}}/resources/lib/waypoints/waypoints.min.js"></script>
+        <script src="{{env('APP_URL')}}/resources/lib/owlcarousel/owl.carousel.min.js"></script>
+        <script src="{{env('APP_URL')}}/resources/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+        <script src="{{env('APP_URL')}}/resources/js/main.js"></script>
         @vite([
-            "resources/lib/chart/chart.min.js",
-            "resources/lib/easing/easing.min.js",
-            "resources/lib/waypoints/waypoints.min.js",
-            "resources/lib/owlcarousel/owl.carousel.min.js",
-            "resources/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js",
-            "resources/js/main.js"
+            // "resources/lib/chart/chart.min.js",
+            // "resources/lib/easing/easing.min.js",
+            // "resources/lib/waypoints/waypoints.min.js",
+            // "resources/lib/owlcarousel/owl.carousel.min.js",
+            // "resources/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js",
+            // "resources/js/main.js"
         ])
         
         @livewireScripts
