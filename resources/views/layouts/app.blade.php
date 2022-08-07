@@ -25,11 +25,16 @@
         <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
         
         <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+
+        <link rel="stylesheet" href="{{env('APP_URL')}}/resources/css/bootstrap.min.css">
+        <link rel="stylesheet" href="{{env('APP_URL')}}/resources/css/style.css">
+        <link rel="stylesheet" href="{{env('APP_URL')}}/resources/lib/owlcarousel/assets/owl.carousel.min.css">
+        <link rel="stylesheet" href="{{env('APP_URL')}}/resources/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css">
         @vite([
-            "resources/css/bootstrap.min.css",
-            "resources/css/style.css",
-            "resources/lib/owlcarousel/assets/owl.carousel.min.css",
-            "resources/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css"
+            // "resources/css/bootstrap.min.css",
+            // "resources/css/style.css",
+            // "resources/lib/owlcarousel/assets/owl.carousel.min.css",
+            // "resources/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css"
         ])
 
         <style>
