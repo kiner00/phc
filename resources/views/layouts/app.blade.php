@@ -23,8 +23,6 @@
         <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
         <script type="text/JavaScript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
         <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
-        
-        <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 
         <link rel="stylesheet" href="{{env('APP_URL')}}/css/bootstrap.min.css" type="text/css">
         <link rel="stylesheet" href="{{env('APP_URL')}}/css/style.css" type="text/css">
