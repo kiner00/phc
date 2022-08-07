@@ -26,10 +26,10 @@
         
         <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 
-        <link rel="stylesheet" href="{{env('APP_URL')}}/resources/css/bootstrap.min.css">
-        <link rel="stylesheet" href="{{env('APP_URL')}}/resources/css/style.css">
-        <link rel="stylesheet" href="{{env('APP_URL')}}/resources/lib/owlcarousel/assets/owl.carousel.min.css">
-        <link rel="stylesheet" href="{{env('APP_URL')}}/resources/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css">
+        <link rel="stylesheet" href="/resources/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/resources/css/style.css">
+        <link rel="stylesheet" href="/resources/lib/owlcarousel/assets/owl.carousel.min.css">
+        <link rel="stylesheet" href="/resources/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css">
         @vite([
             // "resources/css/bootstrap.min.css",
             // "resources/css/style.css",
@@ -53,12 +53,12 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
         
         <!-- JavaScript Libraries -->
-        <script src="{{env('APP_URL')}}/resources/lib/chart/chart.min.js"></script>
-        <script src="{{env('APP_URL')}}/resources/lib/easing/easing.min.js"></script>
-        <script src="{{env('APP_URL')}}/resources/lib/waypoints/waypoints.min.js"></script>
-        <script src="{{env('APP_URL')}}/resources/lib/owlcarousel/owl.carousel.min.js"></script>
-        <script src="{{env('APP_URL')}}/resources/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
-        <script src="{{env('APP_URL')}}/resources/js/main.js"></script>
+        <script src="/resources/lib/chart/chart.min.js"></script>
+        <script src="/resources/lib/easing/easing.min.js"></script>
+        <script src="/resources/lib/waypoints/waypoints.min.js"></script>
+        <script src="/resources/lib/owlcarousel/owl.carousel.min.js"></script>
+        <script src="/resources/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+        <script src="/resources/js/main.js"></script>
         @vite([
             // "resources/lib/chart/chart.min.js",
             // "resources/lib/easing/easing.min.js",
