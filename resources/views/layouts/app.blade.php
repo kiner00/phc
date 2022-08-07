@@ -37,7 +37,7 @@
         @livewireStyles
     </head>
     <body>
-        @include('spinner')
+        {{-- @include('spinner') --}}
         @livewire('sidebar')
 
         {{ $slot }}
