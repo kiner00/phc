@@ -26,16 +26,10 @@
         
         <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 
-        <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
-        <link rel="stylesheet" href="css/style.css" type="text/css">
-        <link rel="stylesheet" href="lib/owlcarousel/assets/owl.carousel.min.css" type="text/css">
-        <link rel="stylesheet" href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" type="text/css">
-        @vite([
-            // "resources/css/bootstrap.min.css",
-            // "resources/css/style.css",
-            // "resources/lib/owlcarousel/assets/owl.carousel.min.css",
-            // "resources/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css"
-        ])
+        <link rel="stylesheet" href="{{env('APP_URL')}}/css/bootstrap.min.css" type="text/css">
+        <link rel="stylesheet" href="{{env('APP_URL')}}/css/style.css" type="text/css">
+        <link rel="stylesheet" href="{{env('APP_URL')}}/lib/owlcarousel/assets/owl.carousel.min.css" type="text/css">
+        <link rel="stylesheet" href="{{env('APP_URL')}}/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" type="text/css">
 
         <style>
             nav svg {
@@ -53,20 +47,12 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
         
         <!-- JavaScript Libraries -->
-        <script src="/lib/chart/chart.min.js"></script>
-        <script src="/lib/easing/easing.min.js"></script>
-        <script src="/lib/waypoints/waypoints.min.js"></script>
-        <script src="/lib/owlcarousel/owl.carousel.min.js"></script>
-        <script src="/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script> 
-        <script src="/resources/js/main.js"></script>
-        @vite([
-            // "resources/lib/chart/chart.min.js",
-            // "resources/lib/easing/easing.min.js",
-            // "resources/lib/waypoints/waypoints.min.js",
-            // "resources/lib/owlcarousel/owl.carousel.min.js",
-            // "resources/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js",
-            // "resources/js/main.js"
-        ])
+        <script src="{{env('APP_URL')}}/lib/chart/chart.min.js"></script>
+        <script src="{{env('APP_URL')}}/lib/easing/easing.min.js"></script>
+        <script src="{{env('APP_URL')}}/lib/waypoints/waypoints.min.js"></script>
+        <script src="{{env('APP_URL')}}/lib/owlcarousel/owl.carousel.min.js"></script>
+        <script src="{{env('APP_URL')}}/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script> 
+        <script src="{{env('APP_URL')}}/resources/js/main.js"></script>
         
         @livewireScripts
         
