@@ -23,6 +23,8 @@
         <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
         <script type="text/JavaScript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
         <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+        
+        <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
         @vite([
             "resources/css/bootstrap.min.css",
             "resources/css/style.css",
