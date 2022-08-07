@@ -17,24 +17,25 @@ class DatabaseSeeder extends Seeder
         // \App\Models\User::factory(99)->create();
 
         \App\Models\User::factory()->create([
-            'name' => 'Test User',
-            'email' => 'test@example.com',
+            'name' => 'Julius Tamayo',
+            'email' => 'juliustamayo.ceo@gmail.com',
+            'role' => 'admin'
         ]);
 
-        \App\Models\Manufacturer::factory()->create([
-            'name' => 'Manufacturer 1',
-        ]);
+        // \App\Models\Manufacturer::factory()->create([
+        //     'name' => 'Manufacturer 1',
+        // ]);
 
-        \App\Models\ProductCategory::factory()->create([
-            'name' => 'Product Category 1',
-        ]);
+        // \App\Models\ProductCategory::factory()->create([
+        //     'name' => 'Product Category 1',
+        // ]);
 
-        \App\Models\Product::factory()->create([
-            'manufacturer_id' => 1,
-            'product_category_id' => 1,
-            'name' => 'Product 1',
-            'created_by' => 1
-        ]);
+        // \App\Models\Product::factory()->create([
+        //     'manufacturer_id' => 1,
+        //     'product_category_id' => 1,
+        //     'name' => 'Product 1',
+        //     'created_by' => 1
+        // ]);
 
         // \App\Models\Manufacturer::factory(10)->create();
         // \App\Models\ManufacturerAccount::factory(10)->create();
