@@ -9,7 +9,7 @@
             <div class="d-flex align-items-center justify-content-between mb-4">
                 <h6 class="mb-0">Purchase Orders</h6>
                 <!-- Button trigger modal -->
-                @if(Auth::user()->role == 'admin')
+                @if(Auth::user()->role == 'admin' || Auth::user()->role == 'accounting')
                     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addPo" wire:click.prevent="addPoModal">
                         Add Purchase Order
                     </button>
@@ -60,7 +60,7 @@
                             <td>{{$purchaseOrder->status}}</td>
                             <td>Php {{number_format($purchaseOrder->remaining_balance, 2)}}</td>
                             <td>Php {{number_format($purchaseOrder->total_cost, 2)}}</td>
-                            @if(Auth::user()->role == 'admin')
+                            @if(Auth::user()->role == 'admin' || Auth::user()->role == 'accounting')
                                 <td>
                                     <button class="btn btn-info m-1" data-bs-toggle="modal" data-bs-target="#editPo" wire:click.prevent="edit({{$purchaseOrder->id}})">Edit</button>
                                     <button class="btn btn-danger m-1" data-bs-toggle="modal" data-bs-target="#deletePo" wire:click.prevent="modalDelete({{$purchaseOrder->id}})">Delete</button>

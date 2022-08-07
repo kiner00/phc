@@ -7,6 +7,7 @@ use App\Models\PurchaseOrder;
 use App\Models\PurchaseOrderPayment as PurchaseOrderPayments;
 use Livewire\WithPagination;
 use Illuminate\Support\Facades\DB;
+use Auth;
 
 class PurchaseOrderPayment extends Component
 {
@@ -35,8 +36,12 @@ class PurchaseOrderPayment extends Component
     public function render()
     {
         $searchTerm = '%'.$this->searchTerm.'%';
+        $user = Auth::user();
+        if($user->role == 'admin' || $user->role == 'accounting'){
+            $purchaseOrderPayments = PurchaseOrderPayments::paginate(10);
+        }
         return view('livewire.purchase-order.purchase-order-payment', [
-            'purchaseOrderPayments' => PurchaseOrderPayments::paginate(10)
+            'purchaseOrderPayments' => $purchaseOrderPayments
         ]);
     }
 

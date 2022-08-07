@@ -28,34 +28,50 @@
                         </div>
                     </div>
                 @endif
-                <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="bi bi-basket"></i>Product</a>
-                    <div class="dropdown-menu bg-transparent border-0">
-                        <a href="/products" class="dropdown-item">Products</a>
-                        <a href="/product-category" class="dropdown-item">Product Category</a>
+
+                @if(Auth::user()->role == "admin")
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="bi bi-basket"></i>Product</a>
+                        <div class="dropdown-menu bg-transparent border-0">
+                            <a href="/products" class="dropdown-item">Products</a>
+                            <a href="/product-category" class="dropdown-item">Product Category</a>
+                        </div>
                     </div>
-                </div>
-                <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="bi bi-calculator"></i>Purchase Order</a>
-                    <div class="dropdown-menu bg-transparent border-0">
-                        <a href="/purchase-orders" class="dropdown-item">Purchase Order</a>
-                        <a href="/purchase-order/payments" class="dropdown-item">Purchase Order Payments</a>
+                @endif
+
+                @if(Auth::user()->role == "admin" || Auth::user()->role == "accounting")
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="bi bi-calculator"></i>Purchase Order</a>
+                        <div class="dropdown-menu bg-transparent border-0">
+                            <a href="/purchase-orders" class="dropdown-item">Purchase Order</a>
+                            <a href="/purchase-order/payments" class="dropdown-item">Purchase Order Payments</a>
+                        </div>
                     </div>
-                </div>
-                <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="bi bi-truck"></i></i>Logistics</a>
-                    <div class="dropdown-menu bg-transparent border-0">
-                        <a href="/logistics" class="dropdown-item">Logistics</a>
-                        <a href="/logistic/manual-stocks" class="dropdown-item">Manual Stocks</a>
+                @endif
+
+                @if(Auth::user()->role == "admin" || Auth::user()->role == "logistic")
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="bi bi-truck"></i></i>Logistics</a>
+                        <div class="dropdown-menu bg-transparent border-0">
+                            <a href="/logistics" class="dropdown-item">Logistics</a>
+                            @if(Auth::user()->role == "admin")
+                                <a href="/logistic/manual-stocks" class="dropdown-item">Manual Stocks</a>
+                            @endif
+                        </div>
                     </div>
-                </div>
-                <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="bi bi-truck"></i></i>Orders</a>
-                    <div class="dropdown-menu bg-transparent border-0">
-                        <a href="/orders" class="dropdown-item">Orders</a>
-                        <a href="/platforms" class="dropdown-item">Platforms</a>
+                @endif
+                
+                @if(Auth::user()->role == "admin" || Auth::user()->role == 'logistic' || Auth::user()->role == 'freelance')
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="bi bi-truck"></i></i>Orders</a>
+                        <div class="dropdown-menu bg-transparent border-0">
+                            <a href="/orders" class="dropdown-item">Orders</a>
+                            @if(Auth::user()->role == "admin")
+                                <a href="/platforms" class="dropdown-item">Platforms</a>
+                            @endif
+                        </div>
                     </div>
-                </div>
+                @endif
             </div>
         </nav>
     </div>

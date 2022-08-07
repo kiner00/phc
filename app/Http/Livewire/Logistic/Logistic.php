@@ -133,7 +133,7 @@ class Logistic extends Component
     {
         $searchTerm = '%'.$this->searchTerm.'%';
         $user = Auth::user();
-        if($user->role == 'admin'){
+        if($user->role == 'admin' || $user->role == 'logistic'){
             $logistics = Logistics::where('purchase_order_id', 'LIKE', $searchTerm)->paginate(10);
         }elseif($user->role == 'manufacturer'){
             $manufacturerAccount = ManufacturerAccount::where('user_id', $user->id)->first();

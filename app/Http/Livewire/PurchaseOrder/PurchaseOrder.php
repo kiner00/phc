@@ -252,7 +252,7 @@ class PurchaseOrder extends Component
     {
         $searchTerm = '%'.$this->searchTerm.'%';
         $user = Auth::user();
-        if($user->role == 'admin'){
+        if($user->role == 'admin' || $user->role == 'accounting'){
             $purchaseOrder = PurchaseOrders::where('purchase_order_number', 'LIKE', $searchTerm)->paginate(10);
         }elseif($user->role == 'manufacturer'){
             $manufacturerAccount = ManufacturerAccount::where('user_id', $user->id)->first();

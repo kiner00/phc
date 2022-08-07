@@ -9,7 +9,7 @@
             <div class="d-flex align-items-center justify-content-between mb-4">
                 <h6 class="mb-0">Delivered Products</h6>
                 <!-- Button trigger modal -->
-                @if(Auth::user()->role == 'admin')
+                @if(Auth::user()->role == 'admin' || Auth::user()->role == 'logistic')
                     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addDelivered" wire:click="purchaseOrderModal">
                         Add Delivered Products
                     </button>
@@ -30,7 +30,7 @@
                             <th scope="col">Product</th>
                             <th scope="col">Delivered</th>
                             <th scope="col">Remaining</th>
-                            @if(Auth::user()->role == 'admin')
+                            @if(Auth::user()->role == 'admin' || Auth::user()->role == 'logistic')
                                 <th scope="col">Action</th>
                             @endif
                         </tr>
@@ -42,7 +42,7 @@
                             <td>{{$logistic->product->name}}</td>
                             <td>{{$logistic->quantity}}</td>
                             <td>{{$logistic->purchaseOrderProduct->remaining}}</td>
-                            @if(Auth::user()->role == 'admin')
+                            @if(Auth::user()->role == 'admin' || Auth::user()->role == 'logistic')
                                 <td>
                                     {{-- <button class="btn btn-info" data-bs-toggle="modal" data-bs-target="#editDelivered" wire:click="edit({{$logistic->id}})">Edit</button> --}}
                                     <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteDelivered" wire:click.prevent="modalDelete({{$logistic->id}})">Delete</button>

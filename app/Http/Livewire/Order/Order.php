@@ -322,13 +322,25 @@ class Order extends Component
     public function render()
     {
         $searchTerm = '%'.$this->searchTerm.'%';
+        if(Auth::user()->role == 'admin' || Auth::user()->role == 'logistic'){
+            $orders = Orders::where('order_number', 'LIKE', $searchTerm)
+                    ->orWhere('full_name', 'LIKE', $searchTerm)
+                    ->orWhere('complete_address', 'LIKE', $searchTerm)
+                    ->orWhere('mobile_number', 'LIKE', $searchTerm)
+                    ->orWhere('total', 'LIKE', $searchTerm)
+                    ->paginate(10);
+        }else{
+            $orders = Orders::where('order_number', 'LIKE', $searchTerm)
+                    ->where('processed_by', Auth::user()->id)
+                    ->orWhere('full_name', 'LIKE', $searchTerm)
+                    ->orWhere('complete_address', 'LIKE', $searchTerm)
+                    ->orWhere('mobile_number', 'LIKE', $searchTerm)
+                    ->orWhere('total', 'LIKE', $searchTerm)
+                    ->paginate(10);
+        }
+        
         return view('livewire.order.order', [
-            'orders' => Orders::where('order_number', 'LIKE', $searchTerm)
-                ->orWhere('full_name', 'LIKE', $searchTerm)
-                ->orWhere('complete_address', 'LIKE', $searchTerm)
-                ->orWhere('mobile_number', 'LIKE', $searchTerm)
-                ->orWhere('total', 'LIKE', $searchTerm)
-                ->paginate(10),
+            'orders' => $orders
         ]);
     }
 }
