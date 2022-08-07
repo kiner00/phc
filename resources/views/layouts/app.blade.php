@@ -26,10 +26,10 @@
         
         <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 
-        <link rel="stylesheet" href="{{asset('resources/css/bootstrap.min.css')}}">
-        <link rel="stylesheet" href="{{asset('resources/css/style.css')}}">
-        <link rel="stylesheet" href="{{asset('resources/lib/owlcarousel/assets/owl.carousel.min.css')}}">
-        <link rel="stylesheet" href="{{asset('resources/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css')}}">
+        <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+        <link rel="stylesheet" href="css/style.css" type="text/css">
+        <link rel="stylesheet" href="lib/owlcarousel/assets/owl.carousel.min.css" type="text/css">
+        <link rel="stylesheet" href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" type="text/css">
         @vite([
             // "resources/css/bootstrap.min.css",
             // "resources/css/style.css",
