@@ -24,10 +24,10 @@
         <script type="text/JavaScript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
         <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
 
-        <link rel="stylesheet" href="{{env('APP_URL')}}/css/bootstrap.min.css" type="text/css">
-        <link rel="stylesheet" href="{{env('APP_URL')}}/css/style.css" type="text/css">
-        <link rel="stylesheet" href="{{env('APP_URL')}}/lib/owlcarousel/assets/owl.carousel.min.css" type="text/css">
-        <link rel="stylesheet" href="{{env('APP_URL')}}/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" type="text/css">
+        <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+        <link rel="stylesheet" href="css/style.css" type="text/css">
+        <link rel="stylesheet" href="lib/owlcarousel/assets/owl.carousel.min.css" type="text/css">
+        <link rel="stylesheet" href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" type="text/css">
 
         <style>
             nav svg {
@@ -45,12 +45,12 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
         
         <!-- JavaScript Libraries -->
-        <script src="{{env('APP_URL')}}/lib/chart/chart.min.js"></script>
-        <script src="{{env('APP_URL')}}/lib/easing/easing.min.js"></script>
-        <script src="{{env('APP_URL')}}/lib/waypoints/waypoints.min.js"></script>
-        <script src="{{env('APP_URL')}}/lib/owlcarousel/owl.carousel.min.js"></script>
-        <script src="{{env('APP_URL')}}/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script> 
-        <script src="{{env('APP_URL')}}/resources/js/main.js"></script>
+        <script src="/lib/chart/chart.min.js"></script>
+        <script src="/lib/easing/easing.min.js"></script>
+        <script src="/lib/waypoints/waypoints.min.js"></script>
+        <script src="/lib/owlcarousel/owl.carousel.min.js"></script>
+        <script src="/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script> 
+        <script src="/resources/js/main.js"></script>
         
         @livewireScripts
         
